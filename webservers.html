@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src = "js/clipboard.min.js" type = "text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- тема для highlights -->
+    <link rel="stylesheet" href="highlight_css/gruvbox-dark.css">
+
+
+  </head>
+  <body>
+    <div class="container is-fluid">
+      <div class="columns is-multiline">
+          <!-- navbar -->
+          <div class="column is-12">
+              <div class="box">
+                  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+                    <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-start">
+                          <div class="navbar-item has-dropdown is-hoverable">
+                              <a class="navbar-link" href="index.html">
+                              Linux
+                              </a>
+
+                              <div class="navbar-dropdown">
+                                <a class="navbar-item" href="docker.html">
+                                    Docker
+                                </a>
+                                <a class="navbar-item"  href="webservers.html">
+                                    WebServers
+                                </a>
+                                <a class="navbar-item"  href="cit.html">
+                                    Git
+                                </a>
+                              </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="php.html">
+                            PHP
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="laravel.php">
+                                  Laravel
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="python.html">
+                            Python
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="django.html">
+                                  Django
+                              </a>
+                              <a class="navbar-item"  href="venv.html">
+                                  Venv
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="javascript.html">
+                            JavaScript
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="vue.html">
+                                  Vue
+                              </a>
+                              <a class="navbar-item"  href="node.html">
+                                  Node
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="htmlcss.html">
+                            HTML : CSS
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="html.html">
+                                  Html
+                              </a>
+                              <a class="navbar-item" href="css.html">
+                                  CSS
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                    </div>
+                  </nav>
+              </div>
+          </div>
+          <!-- end navbar -->
+
+          <!-- main content -->
+          <div class="column is-12">
+            <div class="box">
+              <div class="content">
+                <div class="block">
+                  <span class="tag">
+                    <a href="#xampp">xampp</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#apache">apache</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#nginx">nginx</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#pythonanywhere">pythonanywhere</a>
+                  </span>
+                </div>
+                <div id="django">
+                  <h1>Django</h1>
+
+                  <div class="mt-5">
+                    <h2><a name="xampp">XAMPP</a></h2>
+                    <div class="column is-three-quarters">
+                      <table class="table is-striped is-hoverable">
+                        <thead>
+                        <tr><th>sudo /opt/lampp/xampp <i class="has-text-grey-light">COMMAND_NAME</i> :</th></tr></thead>
+                        <tbody>
+                        <tr><th>start</th><td>- запустить все серверы</td></tr>
+                        <tr><th>startapache</th><td>- запустить только apache</td></tr>
+                        <tr><th>startmysql</th><td>- запустить только mysql</td></tr>
+                        <tr><th>startftp</th><td>- запустить только ftp</td></tr>
+                        <tr><th>stop</th><td>- остановить </td></tr>
+                        <tr><th>stopapache</th><td>- остановить только apache</td></tr>
+                        <tr><th>stopmysql</th><td>- остановить только mysql</td></tr>
+                        <tr><th>stopftp</th><td>- остановить только ftp</td></tr>
+                        <tr><th>reload, reloadapache, reloadmysql, reloadftp</th><td>- перезагрузка всех сервисов</td></tr>
+                        <tr><th>restart</th><td>- остановить и запустить XAMPP</tr>
+                        <tr><th>security</th><td>- проверить настройки безопасности XAMPP</td></tr>
+                        <tr><th>enablessl</th><td>- включить SSL в Apache</td></tr>
+                        <tr><th>disablessl</th><td>- выключить SSL в Apache</td></tr>
+                        <tr><th>panel</th><td>- открыть графическую панель настройки</td></tr>
+                        <tr><th>sudo /opt/lampp/manager-linux-x64.run</th><td>- запуск GUI</td></tr></tbody>
+                      </table>
+                    <p>Войти в базу данных MySQL:
+                      <blockquote>/opt/lampp/bin/mysql -u<i class="has-text-grey-light">name</i> -p<i class="has-text-grey-light">pass</i></blockquote>
+                    </p>
+                    <p>В файле <b>/opt/lampp/etc/httpd.conf</b> должна раскомментирована строка:
+                      <blockquote>Include etc/extra/httpd-vhosts.conf</blockquote>
+                    </p>
+                    <p>Затем в файле<b>/opt/lampp/etc/extra/httpd-vhosts.conf</b> указываются настройки для виртуального хоста, например:
+                      <div>
+                        <div class="code_copy" style='height: 190px;'>
+                          <pre><code id="code">&lt;VirtualHost *:80&gt;
+  ServerAdmin webmaster@dummy-host2.example.com
+  DocumentRoot "/opt/lampp/htdocs/solaris"
+  ServerName solaris
+  ErrorLog "logs/dummy-host2.example.com-error_log"
+  CustomLog "logs/dummy-host2.example.com-access_log" common
+&lt;/VirtualHost&gt;</code></pre>
+                        </div>             
+                        <button class="btn-copy mt-2" data-clipboard-target="#code">
+                          Copy code
+                        </button>
+                      </div>
+                    </p>
+                    <p>И в файле<b>/etc/hosts</b> прописываем:<blockquote>127.0.0.1 project_name</blockquote>
+                      Потребуется перезагрузить xampp, чтобы изменения вступили в силу</p>
+                  </div>
+                  <hr>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- end main content -->
+
+      </div>
+    </div>
+
+
+
+  <script src='js/highlight.pack.js'/></script>
+  <script type='text/javascript'>hljs.initHighlightingOnLoad();</script>
+  <script src='js/clipb_custom.js'/></script>
+
+  </body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src = "js/clipboard.min.js" type = "text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- тема для highlights -->
+    <link rel="stylesheet" href="highlight_css/gruvbox-dark.css">
+
+
+  </head>
+  <body>
+    <div class="container is-fluid">
+      <div class="columns is-multiline">
+          <!-- navbar -->
+          <div class="column is-12">
+              <div class="box">
+                  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+                    <div id="navbarBasicExample" class="navbar-menu">
+                        <div class="navbar-start">
+                          <div class="navbar-item has-dropdown is-hoverable">
+                              <a class="navbar-link" href="index.html">
+                              Linux
+                              </a>
+
+                              <div class="navbar-dropdown">
+                                <a class="navbar-item"  href="webservers.html">
+                                    WebServers
+                                </a>
+                              </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="php.html">
+                            PHP
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="laravel.php">
+                                  Laravel
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="python.html">
+                            Python
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="django.html">
+                                  Django
+                              </a>
+                              <a class="navbar-item"  href="venv.html">
+                                  Venv
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="javascript.html">
+                            JavaScript
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="vue.html">
+                                  Vue
+                              </a>
+                              <a class="navbar-item"  href="node.html">
+                                  Node
+                              </a>
+                            </div>
+                          </div>
+                          <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="htmlcss.html">
+                            HTML : CSS
+                            </a>
+
+                            <div class="navbar-dropdown">
+                              <a class="navbar-item" href="html.html">
+                                  Html
+                              </a>
+                              <a class="navbar-item" href="css.html">
+                                  CSS
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+
+                    </div>
+                  </nav>
+              </div>
+          </div>
+          <!-- end navbar -->
+
+          <!-- main content -->
+          <div class="column is-12">
+            <div class="box">
+              <div class="content">
+                <div class="block">
+                  <span class="tag">
+                    <a href="#ffmpeg">ffmpeg</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#cron">cron</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#docker">docker</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#git">git</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#rename">rename</a>
+                  </span>
+                </div>
+                <div id="django">
+                  <h1>Django</h1>
+
+                  <div class="mt-5">
+                    <h2>Hello world</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni suscipit ipsam repellendus quidem nulla minima error expedita, consequuntur itaque veniam cupiditate voluptates cumque voluptatum quisquam et iste est exercitationem nemo libero. Incidunt impedit quae earum vel dolorem nesciunt tenetur obcaecati eveniet atque omnis tempore eaque nam, modi eos cupiditate inventore.</p>
+                    <div>
+                      <div class="code_copy" style='height: 155px;'>
+                        <pre><code id="code">python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py collectstatic
+python manage.py runserver 0.0.0.0:8000</code></pre>
+                      </div>             
+                      <button class="btn-copy mt-2" data-clipboard-target="#code">
+                        Copy code
+                      </button>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2>Deploy django</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni suscipit ipsam repellendus quidem nulla minima error expedita, consequuntur itaque veniam cupiditate voluptates cumque voluptatum quisquam et iste est exercitationem nemo libero. Incidunt impedit quae earum vel dolorem nesciunt tenetur obcaecati eveniet atque omnis tempore eaque nam, modi eos cupiditate inventore.</p>
+                    <div>
+                      <div class="code_copy" style='height: 200px;'>
+                        <pre><code id="code">function ark($start) {
+        $arr_result = [];
+        print_r($arr_result);
+        return $arr_result;
+      }</code></pre>
+                      </div>             
+                      <button class="btn-copy mt-2" data-clipboard-target="#code">
+                        Copy code
+                      </button>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2><a name="cron">Cron</a></h2>
+                    <div class="column is-three-quarters">
+                      <table class="table is-striped is-hoverable">
+                        <tr><th>crontab -e<th><td>- добавить задачи</td></tr>
+                        <tr><th>crontab -l<th><td>- посмотреть задачи cron для суперпользователя</td></tr>
+                        <tr><th>crontab -r<th><td>- удалить все существующие задачи</td></tr>
+                        <tr><th>* * * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- запуск скрипта serve на исполнение каждую минуту</td></tr>
+                        <tr><th>0 * * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- каждый час, в нулевую минуту</td></tr>
+                        <tr><th>0 0 * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- в нулевую минуту нулевого часа, каждый день, это в 12 ночи</td></tr>
+                        <tr><th>0 0 1 * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- в первый день каждого месяца</td></tr>
+                        <tr><th>0 0 15 * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- в любой день 15 числа</td></tr>
+                        <tr><th>0 0 * 1 0 <i class="has-text-grey-light">/path/to/serve</i><th><td>- В первый день недели первого месяца года, 0 часов 0 минут</td></tr>
+                        <tr><th>0 0 * * 0 <i class="has-text-grey-light">/path/to/serve</i><th><td>- в нулевой день недели каждого месяца</td></tr>
+                        <tr><th>0 7-19  * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- каждый час, с семи утра до семи вечера</td></tr>
+                        <tr><th>5,35 16  * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- запустим скрипт в 5 и 35 минут пятого (16:05 и 16:35), каждый день</td></tr>
+                        <tr><th>*/10 * * * * <i class="has-text-grey-light">/path/to/serve</i><th><td>- запускать скрипт раз в 10 минут</td></tr>
+                        <tr><th>@hourly <i class="has-text-grey-light">/path/to/serve</i><th><td>- запуск скрипта раз в час</td></tr>
+                        <tr><th>@reboot<th><td>- при загрузке, только один раз</td></tr>
+                        <tr><th>@yearly, @annually<th><td>- раз год</td></tr>
+                        <tr><th>@monthly<th><td>- раз в месяц</td></tr>
+                        <tr><th>@weekly<th><td>- раз в неделю</td></tr>
+                        <tr><th>@daily, @midnight<th><td>- каждый день</td></tr>
+                        <tr><th>@hourly<th><td>- каждый час</td></tr> 
+                      </table>                   
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2><a name="docker">Docker</a></h2>
+                    <div class="column is-three-quarters">
+                      <table class="table is-striped is-hoverable">
+                        <tr><th>docker ps <th><td>- показать запущенные контейнеры</td></tr>
+                        <tr><th>docker ps -a<th><td>- показать все контейнеры</td></tr>
+                        <tr><th>docker stop <i class="has-text-grey-light">container_name</i><th><td>- остановить контейнер</td></tr>
+                        <tr><th>docker restart <i class="has-text-grey-light">container_name</i><th><td>- перезапуск контейнера</td></tr>
+                        <tr><th>docker stop <i class="has-text-grey-light">container_1 container_2</i><th><td>- остановка нескольких контейнеров</td></tr>
+                        <tr><th>docker ps -q | xargs docker stop<th><td>- остановка всех работающих контейнеров</td></tr>
+                        <tr><th>docker rm <i class="has-text-grey-light">container_name</i><th><td>- удаление контейнера</td></tr>
+                        <tr><th>docker run --rm <i class="has-text-grey-light">container_name</i><th><td>- удаление контейнера после его остановки</td></tr>
+                        <tr><th>docker ps -a -f status=exited<th><td>- удаление всех остановленных контейнеров</td></tr>
+                        <tr><th>docker <i class="has-text-grey-light">images</i> -a<th><td>- список всех образов</td></tr>
+                        <tr><th>docker rmi <i class="has-text-grey-light">Image1 Image2</i><th><td>-удаление образов</td></tr>
+                        <tr><th>docker rmi $(docker images -a -q)<th><td>-удаление всех образов</td></tr>
+                        <tr><th>docker build -t <i class="has-text-grey-light">myapp</i> .<th><td>- собрать образ</td></tr>
+                        <tr><th>docker run -d -p 5000:5000 <i class="has-text-grey-light">myapp</i><th><td>- запуск на порту 5000</td></tr>
+                        </table>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2><a name="ffmpeg">FFmpeg</a></h2>
+                    <div class="column is-three-quarters">
+                      <p>Выбрать нужный фрагмент видео:</p>
+                      <blockquote><b>ffmpeg -i <i class="has-text-grey-light">2.mp4</i> -ss 00:00:00 -to 00:03:00 -c copy <i class="has-text-grey-light">out.mp4</i></b></blockquote>
+
+                      <p>Если у нас видео в формате mp4 или в чем-то похожем, то для начала предварительно преобразуем видео в формат .ts:</p>
+                      <blockquote><b>ffmpeg -i <i class="has-text-grey-light">video1.mp4</i> -c copy -bsf:v h264_mp4toannexb -f mpegts <i class="has-text-grey-light">tmp1.ts</i></b></blockquote>
+
+                      <p>И затем склеиваем эти видео без перекодировки:</p>
+                      <blockquote><b>ffmpeg -i "concat:<i class="has-text-grey-light">tmp1.ts|tmp2.ts</i>" -vcodec copy -acodec copy <i class="has-text-grey-light">output.mp4</i></b></blockquote>
+
+                      <p>Сжать видео:
+                        30 - уменьшает в два раза, кач-во почти не меняется. 40 - в пять раз сжимает, кач-во приемлемо
+-preset slow  - если убрать то скорость в 1,5 раза быстрее, но качеcтво сжатия хуже
+                      </p>
+                      <blockquote><b>ffmpeg -i <i class="has-text-grey-light">video.mp4</i> -c:v libx264 -preset slow -crf 18 -c:a copy <i class="has-text-grey-light">out.mp4</i></b></blockquote>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2><a name="rename">Rename</a></h2>
+                    <div class="column is-three-quarters">
+                      <table class="table is-striped is-hoverable">
+                        <tr><th>rename 's/^....//' *<th><td>- удаляет первые четыре символа</td></tr>
+                      </table>
+                    </div>
+                  </div>
+                  <hr>
+
+                  <div class="mt-5">
+                    <h2><a name="git">GIT</a></h2>
+                    <div class="column is-three-quarters">
+                      <table class="table is-striped is-hoverable">
+                        <tr><th>git init<th><td>- инициализация проекта</td></tr>
+                        <tr><th>git add .<th><td>- добавить все файлы в индекс</td></tr>
+                        <tr><th>git commit -m "<i class="has-text-grey-light">comment</i> "<th><td>- коммит с комментарием</td></tr>
+                        <tr><th>git commit -a -m "<i class="has-text-grey-light">comment</i> "<th><td>- коммит с комментарием и добавлением в индекс</td></tr>
+                        <tr><th>git remote add origin https://github.com/<span class="has-text-grey-light">name/project_name</span>/git<th><td>- подключение к удаленному репозиторию</td></tr>
+                        <tr><th>git push -u origin master<th><td>- залиаем локальный проект на github</td></tr>
+                        <tr><th>git push origin master<th><td>- добавить изменения на github</td></tr>
+                        <tr><th>git clone https://github.com/<span class="has-text-grey-light">name/project_name</span>.git<th><td>- - скачать проект с github на локальный pc</td></tr>
+                        <tr><th>git pull<th><td>- скачать изменения с github на локальный pc</td></tr>
+
+                      </table>
+                    </div>
+                  </div>
+                  <hr>
+
+
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- end main content -->
+
+      </div>
+    </div>
+
+
+
+  <script src='js/highlight.pack.js'/></script>
+  <script type='text/javascript'>hljs.initHighlightingOnLoad();</script>
+  <script src='js/clipb_custom.js'/></script>
+
+  </body>
+</html>

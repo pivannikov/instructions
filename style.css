@@ -1,0 +1,14 @@
+
+.code_copy {
+    overflow-x: auto; /* прокрутка по горизонтали */
+    overflow-y: scroll; /* прокрутка по вертикали */
+    width: 70%;
+    
+}
+
+a[name] {
+    color: black;
+    pointer-events: none; /* делаем ссылку некликабельной */
+    cursor: default;  /* устанавливаем курсор в виде стрелки */
+}
+
