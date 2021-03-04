@@ -18,6 +18,7 @@
           <!-- navbar -->
           <div class="column is-12">
               <div class="box">
+
                 <nav class="navbar" role="navigation" aria-label="main navigation">
                   <div class="navbar-brand">
                     <a class="navbar-item" href="/">
@@ -117,6 +118,7 @@
                     </div>
                   </div>
                 </nav>
+                 
               </div>
           </div>
           <!-- end navbar -->
@@ -127,66 +129,99 @@
               <div class="content">
                 <div class="block">
                   <span class="tag">
-                    <a href="#xampp">xampp</a>
+                    <a href="#ffmpeg">ffmpeg</a>
                   </span>
                   <span class="tag">
-                    <a href="#apache">apache</a>
+                    <a href="#cron">cron</a>
                   </span>
                   <span class="tag">
-                    <a href="#nginx">nginx</a>
+                    <a href="#docker">docker</a>
                   </span>
                   <span class="tag">
-                    <a href="#pythonanywhere">pythonanywhere</a>
+                    <a href="#git">git</a>
+                  </span>
+                  <span class="tag">
+                    <a href="#rename">rename</a>
                   </span>
                 </div>
+
                 <div id="django">
 
                   <div class="mt-5">
-                    <h2><a name="xampp">XAMPP</a></h2>
-                      <table class="table is-striped is-hoverable">
-                        <thead>
-                        <tr><th>sudo /opt/lampp/xampp <i class="has-text-grey-light">COMMAND_NAME</i> :</th></tr></thead>
-                        <tbody>
-                        <tr><th>start</th><td>- запустить все серверы</td></tr>
-                        <tr><th>startapache</th><td>- запустить только apache</td></tr>
-                        <tr><th>startmysql</th><td>- запустить только mysql</td></tr>
-                        <tr><th>startftp</th><td>- запустить только ftp</td></tr>
-                        <tr><th>stop</th><td>- остановить </td></tr>
-                        <tr><th>stopapache</th><td>- остановить только apache</td></tr>
-                        <tr><th>stopmysql</th><td>- остановить только mysql</td></tr>
-                        <tr><th>stopftp</th><td>- остановить только ftp</td></tr>
-                        <tr><th>reload, reloadapache, reloadmysql, reloadftp</th><td>- перезагрузка всех сервисов</td></tr>
-                        <tr><th>restart</th><td>- остановить и запустить XAMPP</tr>
-                        <tr><th>security</th><td>- проверить настройки безопасности XAMPP</td></tr>
-                        <tr><th>enablessl</th><td>- включить SSL в Apache</td></tr>
-                        <tr><th>disablessl</th><td>- выключить SSL в Apache</td></tr>
-                        <tr><th>panel</th><td>- открыть графическую панель настройки</td></tr>
-                        <tr><th>sudo /opt/lampp/manager-linux-x64.run</th><td>- запуск GUI</td></tr></tbody>
-                      </table>
-                    <p>Войти в базу данных MySQL:
-                      <blockquote>/opt/lampp/bin/mysql -u<i class="has-text-grey-light">name</i> -p<i class="has-text-grey-light">pass</i></blockquote>
+                    <h2>Deploy Django</h2>
+                    <p>Deploy Django3 + Apache2.4 + mod_wsgi (Ubuntu 18 without python2.7, в системе установлен только python3.6.9)</p>
+                    <p>Под root:
+                      <blockquote>sudo apt-get install python-pip apache2 libapache2-mod-wsgi</blockquote>
+                      <blockquote>sudo apt-get install python3-pip apache2 libapache2-mod-wsgi-py3</blockquote>
+                      <blockquote>sudo pip3 install virtualenv</blockquote>
                     </p>
-                    <p>В файле <b>/opt/lampp/etc/httpd.conf</b> должна раскомментирована строка:
-                      <blockquote>Include etc/extra/httpd-vhosts.conf</blockquote>
+                    <p>Далее под user:
+                      <blockquote>mkdir ~/myproject<br>
+                                  cd ~/myproject<br>
+                                  virtualenv myprojectenv<br>
+                                  source myprojectenv/bin/activate<br>
+                                  pip3 install django<br>
+                                  django-admin.py startproject myproject <b>.</b>
+                      </blockquote>
                     </p>
-                    <p>Затем в файле<b>/opt/lampp/etc/extra/httpd-vhosts.conf</b> указываются настройки для виртуального хоста, например:
-                      <div>
-                        <div class="code_copy" style='height: 190px;'>
-                          <pre><code id="code">&lt;VirtualHost *:80&gt;
-  ServerAdmin webmaster@dummy-host2.example.com
-  DocumentRoot "/opt/lampp/htdocs/solaris"
-  ServerName solaris
-  ErrorLog "logs/dummy-host2.example.com-error_log"
-  CustomLog "logs/dummy-host2.example.com-access_log" common
+                    <p>В файле: 
+                      <blockquote>nano myproject/settings.py</blockquote>
+                      прописываем:
+                    <blockquote>STATIC_URL = '/static/'<br>
+                                STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+                    </blockquote>
+                    </p>
+                    <p>Запускаем миграции и создаем суперпользователя:</p>
+                    <div>
+                      <div class="code_copy" style='height: 150px;'>
+                        <pre><code id="deploy_django">python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py collectstatic
+python manage.py runserver 0.0.0.0:8000</code></pre>
+                      </div>             
+                      <button class="btn-copy mt-2" data-clipboard-target="#deploy_django">
+                        Copy code
+                      </button>
+                    </div>
+                    <br>
+                    <p>Переходим по адресу в браузере <b> http://localhost:8000</b>, если отображается старница с Django - все сделано верно.
+                      Теперь можно деактивировать среду:
+                      <blockquote>deactivate myprojectenv</blockquote>
+                    </p>
+                    <br>
+
+                    <p><h6>Настройка Apache</h6></p>
+                    <p>В файле: 
+                      <blockquote>sudo nano /etc/apache2/sites-available/yournamesite.conf</blockquote>
+                      прописываем следующий код:</p> 
+                    <div>
+                      <div class="code_copy" style='height: 300px;'>
+                        <pre><code id="deploy_django_1">&lt;VirtualHost *:80&gt;
+  ServerName yournamesite
+  ServerAlias www.yournamesite
+  ServerAdmin webmaster@yournamesite
+  DocumentRoot /home/pavelf/myproject/myproject
+  
+  Alias /static /home/pavelf/myproject/static
+  &lt;Directory /home/pavelf/myproject/static&gt;
+  Require all granted
+  &lt;/Directory&gt;
+  &lt;Directory /home/pavelf/myproject/myproject&gt;
+  &lt;Files wsgi.py&gt;
+  Require all granted
+  &lt;/Files&gt;
+  &lt;/Directory&gt;
+  WSGIDaemonProcess yournamesite python-home=/home/pavelf/myproject/myprojectenv python-path=/home/pavelf/myproject
+  WSGIProcessGroup yournamesite
+  WSGIScriptAlias / /home/pavelf/myproject/myproject/wsgi.py process-group=hodinky.site application-group=%{GLOBAL}
 &lt;/VirtualHost&gt;</code></pre>
-                        </div>             
-                        <button class="btn-copy mt-2" data-clipboard-target="#code">
-                          Copy code
-                        </button>
-                      </div>
-                    </p>
-                    <p>И в файле<b>/etc/hosts</b> прописываем:<blockquote>127.0.0.1 project_name</blockquote>
-                      Потребуется перезагрузить xampp, чтобы изменения вступили в силу</p>
+                      </div>             
+                      <button class="btn-copy mt-2" data-clipboard-target="#deploy_django_1">
+                        Copy code
+                      </button>
+                    </div>
+                  </div>
                   <hr>
 
                 </div>

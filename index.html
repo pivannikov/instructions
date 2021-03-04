@@ -18,79 +18,107 @@
           <!-- navbar -->
           <div class="column is-12">
               <div class="box">
-                  <nav class="navbar" role="navigation" aria-label="main navigation">
 
-                    <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-start">
-                          <div class="navbar-item has-dropdown is-hoverable">
-                              <a class="navbar-link" href="index.html">
-                              Linux
-                              </a>
+                <nav class="navbar" role="navigation" aria-label="main navigation">
+                  <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                      <img src="images/instr_logo.png" width="60">
+                    </a>
+                
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                      <span aria-hidden="true"></span>
+                    </a>
+                  </div>
+                
+                  <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                      <a class="navbar-item" href="index.html">
+                        Linux
+                      </a>
+                                
+                      <div class="navbar-item"> 
+                        <a class="navbar-item" href="webservers.html">
+                          WebServers
+                        </a>              
+                      </div>
 
-                              <div class="navbar-dropdown">
-                                <a class="navbar-item"  href="webservers.html">
-                                    WebServers
-                                </a>
-                              </div>
-                          </div>
-                          <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="php.html">
-                            PHP
-                            </a>
+                      <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="php.html">
+                        PHP
+                        </a>
 
-                            <div class="navbar-dropdown">
-                              <a class="navbar-item" href="laravel.php">
-                                  Laravel
-                              </a>
-                            </div>
-                          </div>
-                          <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="python.html">
-                            Python
-                            </a>
-
-                            <div class="navbar-dropdown">
-                              <a class="navbar-item" href="django.html">
-                                  Django
-                              </a>
-                              <a class="navbar-item"  href="venv.html">
-                                  Venv
-                              </a>
-                            </div>
-                          </div>
-                          <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="javascript.html">
-                            JavaScript
-                            </a>
-
-                            <div class="navbar-dropdown">
-                              <a class="navbar-item" href="vue.html">
-                                  Vue
-                              </a>
-                              <a class="navbar-item"  href="node.html">
-                                  Node
-                              </a>
-                            </div>
-                          </div>
-                          <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="htmlcss.html">
-                            HTML : CSS
-                            </a>
-
-                            <div class="navbar-dropdown">
-                              <a class="navbar-item" href="html.html">
-                                  Html
-                              </a>
-                              <a class="navbar-item" href="css.html">
-                                  CSS
-                              </a>
-                            </div>
-                          </div>
-
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="laravel.php">
+                              Laravel
+                          </a>
                         </div>
+                      </div>
+
+                      <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="python.html">
+                        Python
+                        </a>
+
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="django.html">
+                              Django
+                          </a>
+                          <a class="navbar-item"  href="venv.html">
+                              Venv
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="javascript.html">
+                        JavaScript
+                        </a>
+
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="vue.html">
+                              Vue
+                          </a>
+                          <a class="navbar-item"  href="node.html">
+                              Node
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="htmlcss.html">
+                        HTML : CSS
+                        </a>
+
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="html.html">
+                              Html
+                          </a>
+                          <a class="navbar-item" href="css.html">
+                              CSS
+                          </a>
+                        </div>
+                      </div>
+
 
                     </div>
-                  </nav>
+                
+                    <div class="navbar-end">
+                      <div class="navbar-item">
+                        <div class="buttons">
+                          <a class="button is-primary">
+                            <strong>Sign up</strong>
+                          </a>
+                          <a class="button is-light">
+                            Log in
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                 
               </div>
           </div>
           <!-- end navbar -->
@@ -116,48 +144,11 @@
                     <a href="#rename">rename</a>
                   </span>
                 </div>
-                <div id="django">
-                  <h1>Django</h1>
 
-                  <div class="mt-5">
-                    <h2>Hello world</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni suscipit ipsam repellendus quidem nulla minima error expedita, consequuntur itaque veniam cupiditate voluptates cumque voluptatum quisquam et iste est exercitationem nemo libero. Incidunt impedit quae earum vel dolorem nesciunt tenetur obcaecati eveniet atque omnis tempore eaque nam, modi eos cupiditate inventore.</p>
-                    <div>
-                      <div class="code_copy" style='height: 155px;'>
-                        <pre><code id="code">python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py collectstatic
-python manage.py runserver 0.0.0.0:8000</code></pre>
-                      </div>             
-                      <button class="btn-copy mt-2" data-clipboard-target="#code">
-                        Copy code
-                      </button>
-                    </div>
-                  </div>
-                  <hr>
-
-                  <div class="mt-5">
-                    <h2>Deploy django</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni suscipit ipsam repellendus quidem nulla minima error expedita, consequuntur itaque veniam cupiditate voluptates cumque voluptatum quisquam et iste est exercitationem nemo libero. Incidunt impedit quae earum vel dolorem nesciunt tenetur obcaecati eveniet atque omnis tempore eaque nam, modi eos cupiditate inventore.</p>
-                    <div>
-                      <div class="code_copy" style='height: 200px;'>
-                        <pre><code id="code">function ark($start) {
-        $arr_result = [];
-        print_r($arr_result);
-        return $arr_result;
-      }</code></pre>
-                      </div>             
-                      <button class="btn-copy mt-2" data-clipboard-target="#code">
-                        Copy code
-                      </button>
-                    </div>
-                  </div>
-                  <hr>
-
+                <div>
+                  
                   <div class="mt-5">
                     <h2><a name="cron">Cron</a></h2>
-                    <div class="column is-three-quarters">
                       <table class="table is-striped is-hoverable">
                         <tr><th>crontab -e<th><td>- добавить задачи</td></tr>
                         <tr><th>crontab -l<th><td>- посмотреть задачи cron для суперпользователя</td></tr>
@@ -180,13 +171,11 @@ python manage.py runserver 0.0.0.0:8000</code></pre>
                         <tr><th>@daily, @midnight<th><td>- каждый день</td></tr>
                         <tr><th>@hourly<th><td>- каждый час</td></tr> 
                       </table>                   
-                    </div>
                   </div>
                   <hr>
 
                   <div class="mt-5">
                     <h2><a name="docker">Docker</a></h2>
-                    <div class="column is-three-quarters">
                       <table class="table is-striped is-hoverable">
                         <tr><th>docker ps <th><td>- показать запущенные контейнеры</td></tr>
                         <tr><th>docker ps -a<th><td>- показать все контейнеры</td></tr>
@@ -203,13 +192,11 @@ python manage.py runserver 0.0.0.0:8000</code></pre>
                         <tr><th>docker build -t <i class="has-text-grey-light">myapp</i> .<th><td>- собрать образ</td></tr>
                         <tr><th>docker run -d -p 5000:5000 <i class="has-text-grey-light">myapp</i><th><td>- запуск на порту 5000</td></tr>
                         </table>
-                    </div>
                   </div>
                   <hr>
 
                   <div class="mt-5">
                     <h2><a name="ffmpeg">FFmpeg</a></h2>
-                    <div class="column is-three-quarters">
                       <p>Выбрать нужный фрагмент видео:</p>
                       <blockquote><b>ffmpeg -i <i class="has-text-grey-light">2.mp4</i> -ss 00:00:00 -to 00:03:00 -c copy <i class="has-text-grey-light">out.mp4</i></b></blockquote>
 
@@ -224,13 +211,12 @@ python manage.py runserver 0.0.0.0:8000</code></pre>
 -preset slow  - если убрать то скорость в 1,5 раза быстрее, но качеcтво сжатия хуже
                       </p>
                       <blockquote><b>ffmpeg -i <i class="has-text-grey-light">video.mp4</i> -c:v libx264 -preset slow -crf 18 -c:a copy <i class="has-text-grey-light">out.mp4</i></b></blockquote>
-                    </div>
                   </div>
                   <hr>
 
                   <div class="mt-5">
                     <h2><a name="rename">Rename</a></h2>
-                    <div class="column is-three-quarters">
+                    <div class="column">
                       <table class="table is-striped is-hoverable">
                         <tr><th>rename 's/^....//' *<th><td>- удаляет первые четыре символа</td></tr>
                       </table>
@@ -240,24 +226,24 @@ python manage.py runserver 0.0.0.0:8000</code></pre>
 
                   <div class="mt-5">
                     <h2><a name="git">GIT</a></h2>
-                    <div class="column is-three-quarters">
                       <table class="table is-striped is-hoverable">
                         <tr><th>git init<th><td>- инициализация проекта</td></tr>
                         <tr><th>git add .<th><td>- добавить все файлы в индекс</td></tr>
                         <tr><th>git commit -m "<i class="has-text-grey-light">comment</i> "<th><td>- коммит с комментарием</td></tr>
                         <tr><th>git commit -a -m "<i class="has-text-grey-light">comment</i> "<th><td>- коммит с комментарием и добавлением в индекс</td></tr>
-                        <tr><th>git remote add origin https://github.com/<span class="has-text-grey-light">name/project_name</span>/git<th><td>- подключение к удаленному репозиторию</td></tr>
+                        <tr><th>git remote add origin https://github.com/<span class="has-text-grey-light">user_name/project_name</span>/git<th><td>- подключение к удаленному репозиторию</td></tr>
                         <tr><th>git push -u origin master<th><td>- залиаем локальный проект на github</td></tr>
                         <tr><th>git push origin master<th><td>- добавить изменения на github</td></tr>
-                        <tr><th>git clone https://github.com/<span class="has-text-grey-light">name/project_name</span>.git<th><td>- - скачать проект с github на локальный pc</td></tr>
+                        <tr><th>git clone https://github.com/<span class="has-text-grey-light">user_name/project_name</span>.git<th><td>- - скачать проект с github на локальный pc</td></tr>
                         <tr><th>git pull<th><td>- скачать изменения с github на локальный pc</td></tr>
+                        <tr><th>git checkout -b <span class="has-text-grey-light">branch-name</span><th><td>- создать ветку с именем branch-name и переключиться на нее</td></tr>
+                        <tr><th>git push -u origin <span class="has-text-grey-light">branch-name</span><th><td>- залить ветку в удаленный репозиторий</td></tr>
+                        <tr><th>git clone https://github.com/<span class="has-text-grey-light">user_name/project_name</span>/git <span class="has-text-grey-light"> branch-name</span><th><td>- склонировать ПОЛНОСТЬЮ весь репозиторий и просто переключиться на ветку branch-name</td></tr>
+                        <tr><th>git clone --branch=<span class="has-text-grey-light">branch-name</span> https://github.com/<span class="has-text-grey-light">user_name/project_name</span>/git<th><td>- склонировать ТОЛЬКО конкретную ветку branch-name</td></tr>
 
                       </table>
-                    </div>
                   </div>
                   <hr>
-
-
 
 
                 </div>
@@ -271,7 +257,7 @@ python manage.py runserver 0.0.0.0:8000</code></pre>
     </div>
 
 
-
+  <script src='js/script.js'/></script>
   <script src='js/highlight.pack.js'/></script>
   <script type='text/javascript'>hljs.initHighlightingOnLoad();</script>
   <script src='js/clipb_custom.js'/></script>
